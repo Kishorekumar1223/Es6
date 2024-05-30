@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<body>
+    <script>
+        function Person(){
+            this.name = "Kishore"
+        }
+        Person.prototype.age = 21;
+        const person1 = new Person();
+        Person.prototype= {age:50}  //changing the value using object
+      //Person.prototype.age = 50  //property change value
+
+        const person2 = new Person();
+        console.log(person1.age);
+        console.log(person2.age);
+        console.log(person2.__proto__)  //to access the prototype value
+    </script>
+</body>
+</html>

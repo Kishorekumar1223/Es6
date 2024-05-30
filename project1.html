@@ -1,0 +1,34 @@
+<body>
+  <form name="myform" action="Success.html" method="post" onsubmit="return validate()">
+    <h2><center>
+    Username: <input type="text" name="uname" /><br/><br/> 
+    Password: <input type="password" name="pass" /><br/><br/>
+    Re-type Password: <input type="password" name="retype"/><br/><br/>
+    <input type="submit" />
+  </form>
+  <script>
+
+    function validate(){
+      var name =  document.myform.uname.value;
+      var pass = document.myform.pass.value;
+      var retype = document.myform.retype.value;
+
+      if(name == null || name == ''){
+        alert("Please Enter the name");
+        return false;
+      }
+      else if(pass.length > 8 || pass == ''){
+        alert('Password should be less than or equal to 8 character');
+        return false;
+      }
+      else if(pass != retype){
+        alert('Passwor and retype password should match');
+        return false;
+      }
+      else {
+        return true;
+      }
+    }
+  </script>
+  </body>
+  </html>
